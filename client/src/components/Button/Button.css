@@ -1,0 +1,32 @@
+.komje-button {
+  background: var(--accent-color);
+  color: var(--primary-light-color);
+  border: 1px solid var(--accent-color);
+  padding: 0.8rem 3rem;
+  border-radius: var(--border-radius-btn-input);
+  margin: 0.5rem 0 0.5rem 0.5rem;
+  cursor: pointer;
+  font-size: var(--font-size-btn);
+}
+
+.komje-button:hover {
+  background-color: var(--primary-light-color);
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: var(--border-radius-btn-input);
+  padding: calc(0.8rem - 1px) calc(3rem -1px);
+}
+
+.komje-button:disabled {
+  background-color: var(--primary-light-color);
+  color: var(--place-holder);
+  border: 1px solid var(--place-holder);
+  cursor: not-allowed;
+}
+
+@media only screen and (max-width: 600px) {
+  .komje-button {
+    width: 100%;
+    padding: 0.8rem 2rem;
+  }
+}

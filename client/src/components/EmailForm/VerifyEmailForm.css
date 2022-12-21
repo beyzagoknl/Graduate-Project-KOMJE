@@ -1,0 +1,39 @@
+.verify-container {
+  height: 60vh;
+  width: 100%;
+  margin-top: 4rem;
+}
+.verify-box {
+  max-width: 50%;
+  margin: 2rem auto 2rem auto;
+}
+.verify-header {
+  margin-top: 1rem;
+}
+.verify-text {
+  margin-top: 2rem;
+}
+.verify-form {
+  padding: 2rem 0rem 1rem 0rem;
+}
+.send-link-btn {
+  width: 70%;
+  border: none;
+  height: 50px;
+  margin: auto;
+  margin-top: 10px;
+}
+.resend-email-button {
+  width: 70%;
+  border: none;
+  height: 50px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .verify-box {
+    margin-top: 4rem;
+    min-width: 90%;
+  }
+}

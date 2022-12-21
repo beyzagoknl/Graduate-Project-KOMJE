@@ -1,0 +1,171 @@
+.welcome {
+  min-height: 100vh;
+}
+
+.par-2 {
+  font-weight: 500;
+  letter-spacing: -0.666667px;
+  line-height: 40px;
+  text-align: center;
+  max-width: 100%;
+}
+
+.text {
+  text-align: justify;
+  margin: 16px;
+}
+
+.btn-down {
+  padding: 1rem 2rem;
+  margin: 1rem;
+  width: 300px;
+}
+.btn-div {
+  text-align: center;
+}
+
+.header {
+  width: 80vw;
+  margin: auto;
+  margin-bottom: 25px;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header-text-box {
+  width: 50%;
+  justify-content: center;
+  padding: 15px;
+}
+
+.image-container {
+  width: 50%;
+  max-width: 700px;
+  margin: auto;
+}
+
+.welcome-img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+.description {
+  margin: auto;
+  text-align: center;
+  padding: 17px;
+  margin-top: 1rem;
+}
+.desc1 {
+  width: 80vw;
+  margin: auto;
+  margin-bottom: 0.7rem;
+  margin-top: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.desc1-container {
+  width: 50%;
+  justify-content: center;
+  padding: 35px;
+  text-align: center;
+}
+
+.aboutApp {
+  display: flex;
+  height: 400px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.free {
+  width: 25%;
+  display: flex;
+  margin: auto;
+}
+
+.about-section {
+  width: 150px;
+  height: 150px;
+  border-right: 10px solid var(--accent-color);
+  border-bottom: 10px solid var(--accent-color);
+  margin: auto;
+}
+
+.main1 {
+  width: 50%;
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.imagePhoto {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  height: auto;
+  vertical-align: bottom;
+}
+
+@media screen and (max-width: 600px) {
+  .imagePhoto {
+    border-radius: 0;
+  }
+
+  .main1 {
+    width: 100vw;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .aboutApp {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -2rem;
+  }
+
+  .welcome-img {
+    border-radius: 15px;
+    width: 90%;
+    margin-left: 3rem;
+  }
+  .text {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .image-container {
+    width: 100%;
+  }
+
+  .header-text-box {
+    width: 100%;
+  }
+
+  .header {
+    width: 100vw;
+    margin-top: 3rem;
+  }
+
+  .desc1-container {
+    width: 100vw;
+  }
+
+  .main1 {
+    width: 100%;
+  }
+
+  .desc1 {
+    width: 100%;
+  }
+
+  .free {
+    width: 50%;
+  }
+}

@@ -1,0 +1,44 @@
+.komje-form-container {
+  display: block;
+  margin: 2rem auto 2rem auto;
+  width: 50rem;
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-form);
+  padding: 3rem 1rem 5rem 1rem;
+  box-shadow: 2px 2px 5px 1px rgb(0 0 0 / 15%),
+    -2px -2px 5px 1px rgb(0 0 0 / 15%);
+}
+
+.komje-form-container-header {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--accent-color);
+}
+
+.komje-form-container form {
+  width: 80%;
+  margin: 0 auto;
+}
+.information-about-form {
+  width: 80%;
+  border: 1px solid var(--secondary-color);
+  padding: 20px;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 10px;
+  font-size: var(--font-size-input);
+  color: var(--accent-color) !important;
+}
+@media only screen and (max-width: 600px) {
+  .komje-form-container {
+    width: 100%;
+  }
+  .information-about-form {
+    width: 100%;
+  }
+
+  .komje-form-container form {
+    width: calc(100% - 10px);
+  }
+}

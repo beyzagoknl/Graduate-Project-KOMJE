@@ -1,0 +1,35 @@
+.formInput {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputLine {
+  width: 80%;
+  margin: auto;
+}
+
+.error-span {
+  font-size: 8px;
+  color: var(--error-color);
+  visibility: hidden;
+}
+.inputLine input[type="password"] {
+  padding-right: 2rem;
+}
+input:invalid[focused="true"] {
+  border: 1px solid;
+}
+
+input:invalid[focused="true"] ~ span {
+  visibility: visible;
+}
+
+.hideIcon {
+  cursor: pointer;
+  padding-left: 10px;
+  margin-left: -35px;
+}
+
+.input-placeholder {
+  padding-left: 1rem;
+}

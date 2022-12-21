@@ -1,0 +1,60 @@
+.log-title {
+  margin: 1.2rem;
+  margin-top: -0.7rem;
+  text-align: center;
+}
+.login-box {
+  margin: auto;
+  margin-top: 5rem;
+  border-radius: 15px;
+}
+.log-in-btn {
+  border-radius: 5px;
+  width: 70%;
+  border: none;
+  height: 50px;
+  margin: 2rem auto;
+}
+.btn-box {
+  width: 50%;
+  margin: auto;
+  display: flex;
+}
+
+.input-check-box {
+  width: 15px;
+  margin-right: 10px;
+}
+.remember-box {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: 80%;
+}
+.new-account-link {
+  margin-top: 0.5rem;
+}
+.form-box {
+  padding: 10px;
+}
+.loginPage-form-box {
+}
+
+.login-labels {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+@media only screen and (min-width: 200px) {
+  .login-box {
+    max-width: 90%;
+    margin: auto;
+    margin-top: -5rem;
+  }
+  .log-in-btn {
+    min-width: 50px;
+  }
+}
+.login-form {
+}

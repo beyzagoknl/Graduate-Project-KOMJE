@@ -1,0 +1,140 @@
+.event-line-error-message {
+  font-size: var(--font-size-input-error);
+  padding: 0.3rem;
+  color: var(--error-color);
+  display: none;
+}
+
+input:invalid[focused="true"] ~ .event-line-error-message {
+  display: block;
+}
+
+.event-line {
+  width: 100%;
+  margin: auto;
+}
+
+.event-line-title {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 4px 0;
+  color: var(--primary-dark-color);
+  font-size: 0.9rem;
+}
+
+.event-line-title span {
+  font-size: var(--font-size-input-label);
+  color: var(--secondary-color);
+  visibility: visible;
+  vertical-align: super;
+  display: contents;
+}
+
+.event-line input,
+.event-line select {
+  color: var(--accent-color) !important;
+  padding: 8px !important;
+  width: 100%;
+  font-size: var(--font-size-input);
+}
+
+.event-line input::placeholder {
+  color: var(--place-holder) !important;
+  width: 100%;
+}
+
+.event-line-description {
+  color: var(--accent-color) !important;
+  padding: 8px !important;
+  width: 100%;
+}
+
+.event-line-description::placeholder {
+  color: var(--place-holder) !important;
+  padding: 8px !important;
+  width: 100%;
+}
+
+.komje-form-option {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: var(--primary-dark-color);
+  font-size: var(--font-size-input);
+  padding: 8px;
+}
+
+.komje-form-option input {
+  width: 16px;
+  height: 16px;
+  margin: -6px 10px;
+}
+
+.komje-question-form {
+  border: 1px solid var(--secondary-color);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.komje-question-form .question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.komje-question-form .question-header .delete-icon {
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.komje-question-form .question-header .delete-icon:hover {
+  color: var(--primary-dark-color);
+}
+
+.type-and-required {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+}
+
+.komje-question-form .attributes {
+  border-top: 1px dashed var(--primary-light-color);
+  margin: 25px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.komje-question-form .options {
+  border-top: 1px dashed var(--primary-light-color);
+  margin: 25px 0px;
+}
+
+.komje-question-form .options .option {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.komje-question-form .options .option input[type="checkbox"],
+.komje-question-form .options .option input[type="radio"] {
+  margin-top: 45px;
+}
+
+.komje-question-form .options .option .option-delete-icon {
+  margin-top: 45px;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.komje-question-form .options .option .option-delete-icon:hover {
+  color: var(--primary-dark-color);
+}
+
+.komje-question-form .button-container {
+  display: flex;
+  justify-content: end;
+}

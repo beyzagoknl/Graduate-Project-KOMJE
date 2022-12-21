@@ -1,0 +1,12 @@
+.eventInfoBox {
+  width: 100%;
+  margin: auto;
+  padding-left: 3rem;
+}
+.weddingInfo {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 600px;
+  min-width: 50%;
+}

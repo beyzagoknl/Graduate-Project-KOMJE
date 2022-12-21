@@ -1,0 +1,83 @@
+.questionBox {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+}
+.questionBox button {
+  width: 130px;
+  padding: 0.6rem 0;
+}
+.eventGuest-form-box {
+  min-width: 280px;
+  width: 80%;
+  margin: auto;
+}
+.guest-form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-width: 280px;
+  margin: auto;
+}
+.full-name-input-box {
+  margin-top: 20px;
+}
+.text-number-input {
+  padding: 15px;
+  width: 80%;
+}
+.radio-input {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.answerBox {
+  display: flex;
+}
+
+.question {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.textAnswers {
+  width: 80%;
+  margin: auto;
+}
+
+.textAnswers input {
+  width: 70%;
+}
+
+.required {
+  font-size: 10px;
+  color: var(--secondary-color);
+  visibility: visible;
+  vertical-align: super;
+}
+
+.answer-input-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 1rem;
+  margin: 10px;
+}
+.value-box {
+  margin-left: 5px;
+}
+
+.question-text {
+  margin-bottom: 15px;
+}
+
+.weddingDefault {
+  width: 90%;
+  margin: auto;
+  padding: 50px 0;
+}

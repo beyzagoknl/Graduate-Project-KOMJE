@@ -1,0 +1,10 @@
+.short-link-form {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.short-link-form input[type="text"] {
+  padding: 0 10px;
+  width: 100%;
+}

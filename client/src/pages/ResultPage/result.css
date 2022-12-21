@@ -1,0 +1,117 @@
+.containerResult {
+  padding: 0.4rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.guests-count-box {
+  box-shadow: 2px 2px 5px 1px rgb(0 0 0 / 15%),
+    -2px -2px 5px 1px rgb(0 0 0 / 15%);
+  padding: 3rem 2rem 1.5rem 2rem;
+  border-radius: var(--border-radius-form);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -0.6rem;
+  text-align: center;
+}
+.guests-count-box .guess-count {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+}
+
+.count-box {
+  display: flex;
+  justify-content: space-between;
+}
+.lists-box {
+  padding: 3rem 2rem 1.5rem 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: start;
+}
+
+.guest-list {
+  color: var(--primary-color);
+  font-size: var(--font-size-paragraph);
+  text-align: start;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.guest-list td {
+  padding: 0.5rem 2rem;
+}
+
+.guest-list tr:nth-child(even) {
+  background-color: var(--primary-light-color);
+}
+
+.guestList-btn {
+  width: fit-content;
+  font-size: large;
+  padding: 10px;
+  margin: 1rem;
+  font-size: 14px;
+}
+.exit {
+  padding: 0.5rem;
+  width: fit-content;
+  font-size: 10px;
+  font-weight: 700;
+  margin-top: -1rem;
+  float: right;
+}
+
+.result-chart-component {
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px;
+  grid-column: span 6;
+  padding: 3rem 1rem 5rem 1rem;
+  box-shadow: 2px 2px 5px 1px rgb(0 0 0 / 15%),
+    -2px -2px 5px 1px rgb(0 0 0 / 15%);
+}
+.no-result-msg {
+  font-size: large;
+  border-radius: 5px;
+}
+.sorry-span {
+  padding: 5px;
+  text-align: start;
+  border-radius: 5px;
+  background-color: var(--primary-dark-color);
+  color: var(--white-color);
+}
+.flex-bar-chart-section {
+  gap: 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+@media (max-width: 600px) {
+  .flex-bar-chart-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .containerResult {
+    padding: 0.4rem 1rem;
+  }
+
+  .guests-count-box {
+    margin-bottom: 1.2rem;
+  }
+
+  .guests-count-box .guess-count {
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .guests-count-box {
+    margin-bottom: 1.2rem;
+  }
+}

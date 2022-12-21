@@ -1,0 +1,358 @@
+openapi: 3.0.3
+info:
+  title: Swagger Petstore - OpenAPI 3.0
+  description: >-
+    This is Komje API Documentation based on the OpenAPI 3.0 specification. 
+    You can find out more about
+
+    Swagger at [https://swagger.io](https://swagger.io). In the third iteration
+    of the pet store, we've switched to the design first approach!
+
+    You can now help us improve the API whether it's by making changes to the
+    definition itself or to the code.
+
+    That way, with time, we can improve the API in general, and expose some of
+    the new features in OAS3.
+  contact:
+    email: komje-app@outlook.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
+servers:
+  - url: http://localhost:1234/api
+tags:
+  - name: auth
+    description: Authorization
+    externalDocs:
+      description: Find out more
+      url: http://swagger.io
+  - name: event
+    description: Operations about event
+paths:
+  /user/register:
+    post:
+      tags:
+        - auth
+      summary: register a new user with email and password
+      description: Add a new user to the db and sen activation email
+      operationId: registerUser
+      requestBody:
+        description: register a user with email and password
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                  example: Lytton
+                email:
+                  type: string
+                  example: lytton@gmail.com
+                password:
+                  type: string
+                  example: Abc-1234
+        required: true
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Token"
+        "400":
+          description: Bad Request
+
+  /user/login:
+    post:
+      tags:
+        - auth
+      summary: login the user with email and password
+      description: make user logged in to the system
+      operationId: loginUser
+      requestBody:
+        description: login the user with email and password
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: lytton@gmail.com
+                password:
+                  type: string
+                  example: Abc-1234
+        required: true
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Token"
+        "400":
+          description: Bad Request
+
+  /user/{id}/verify/{token}/:
+    get:
+      tags:
+        - auth
+      summary: verify your email address
+      description: click the link sent your email address and verify your account
+      operationId: verifyAccount
+      parameters:
+        - name: id
+          in: path
+          description: ID of user
+          required: true
+          schema:
+            type: string
+        - name: token
+          in: path
+          description: token for the verification
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Email verified successfully
+        "400":
+          description: Invalid ID supplied
+        "404":
+          description: User not found
+
+  /user/forgotPassword/:
+    post:
+      tags:
+        - auth
+      summary: forgot password request
+      description: sends mail to your mail address includes password reset link
+      operationId: forgotPassword
+      requestBody:
+        description: enter your email address to get password reset email
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: lytton@gmail.com
+                  required: true
+        required: true
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Password reset link sent to your email account
+        "400":
+          description: Bad request
+
+  /user/{id}/reset/{token}:
+    post:
+      tags:
+        - auth
+      summary: reset your password
+      description: click the link sent your email address and go to the password reset page
+      operationId: resetPassword
+      parameters:
+        - name: id
+          in: path
+          description: ID of user
+          required: true
+          schema:
+            type: string
+        - name: token
+          in: path
+          description: token for the verification
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: enter your new password to update
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: string
+                  example: Aaaa-123
+                  required: true
+        required: true
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Password reset successfully
+        "400":
+          description: Bad request
+
+  /event:
+    post:
+      tags:
+        - event
+      summary: create new event
+      description: create an event to invite someone
+      operationId: createEvent
+      requestBody:
+        description: enter information about event and the question form
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Event"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+      security:
+        - bearerAuth: []
+
+components:
+  schemas:
+    Token:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+        token:
+          type: string
+          example: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzY2ZGNiNGY4YTQ1NDVhYTEwZjU5ZTgiLCJpc3MiOiJrb21qZS5jb20iLCJpYXQiOjE2Njc2ODU1NTY5NjgsImlzVmVyaWZpZWQiOmZhbHNlLCJpc0FjdGl2ZSI6dHJ1ZSwibGFzdExvZ2luRGF0ZSI6IjIwMjItMTEtMDVUMjE6NTg6MjMuMjAzWiIsImVtYWlsIjoiYWtpbi50YW5pcy5kZXZAZ21haWwuY29tIiwiZXhwIjoxNjY3Njg1NjQzMzY4fQ.mEc0GqKAYE6lfiXUaZKOMynjugEoHNhvRL57Ra33AAwT5kaTAw8he8XPmlCueOTSC4OKwkbQqme010otMffMesGYhu45AB01AJ25HTYSz1whgRWHlP38VtcyqVPgmXxN2zgutvxw8t7muN0aI45dYKWF2XlMyhD_JRWu9OjXueE32nffQ9Ogj9Co2H8CFelYmgAv_Ynj1-b2Uv3Vo9Ytr0LPnrBCc0_NxfWao9aSQMDUmqgO01MFNY5-IbACpcu3hsZgx3Mu_F1U7ElhPbylZ0SBU-RVhMLDEGi_ycOINS4X2TIWZwoB29XYw7Fw8dCtBgTbM-23wkfyJ_wq4zzagYPMcs_EvfPyU_EnJV03c6xt3cqVEN8PJkUpNo5UwzTIa_yNDIIufMUb3tljkX4YDm__wpG8Coj_de6cg6ew3rsWc096oiMFuvstobYynzrbxsbpKMZkFjTk9AKeLIZIBbDuF5RypYpUHFi9bj_mxZ4NpHymjRpxxmqcMJgrKYe_82bW2E8wHboSMkVsJAot3O2Le65fsKf2MoFasflBPgnTTGO-lynlo22KEyewUE-GXnLdnISgpMsc1JhmvOF5dELNAqhsZf_jwLORQxXJaLGiGJGnIyM6E6g3Vo_oJeLox5KwDrsvowPttS_-LN7xBo5BedVwKOyCMkb8j3mMFHI
+        message:
+          type: string
+          example: An Email sent to your account please verify
+    Event:
+      type: object
+      properties:
+        isPrivate:
+          type: boolean,
+          example: false
+        type:
+          type: String,
+          example: WEDDING
+        template:
+          type: String
+          example: DEFAULT,
+        templateDetails:
+          $ref: "#/components/schemas/TemplateDetails"
+        form:
+          $ref: "#/components/schemas/Form"
+    TemplateDetails:
+      type: object
+      properties:
+        eventTitle:
+          type: String
+          example: Our Wedding
+        brideName:
+          type: String
+          example: Camelia
+        groomName:
+          type: String
+          example: Oliver
+        date:
+          type: Date
+          example: 2022-09-09T13:00:00
+        address:
+          type: String
+          example: somewhere
+        description:
+          type: String
+          example: wedding description
+        contactNumber:
+          type: String
+          example: 0612345678
+        contactName:
+          type: String
+          example: Leonel Messi
+        images:
+          type: array
+          items:
+            type: object
+            properties:
+              url:
+                type: String
+                example: http://localhost:1234/images/unique-image-name
+              alt:
+                type: String
+                example: wedding image
+    Form:
+      type: array
+      items:
+        type: object
+        properties:
+          key:
+            type: String
+            example: questionId
+          label:
+            type: String
+            example: question text?
+          attributes:
+            $ref: "#/components/schemas/Attributes"
+          options:
+            $ref: "#/components/schemas/Options"
+    Attributes:
+      type: object
+      properties:
+        type:
+          type: String
+          example: typeOfAttribute
+        required:
+          type: boolean
+          example: true
+        max:
+          type: number
+          example: 5
+        min:
+          type: number
+          example: 0
+        after:
+          type: String
+          example: 13:30
+        before:
+          type: String
+          example: 17:30
+    Options:
+      type: array
+      items:
+        type: object
+        properties:
+          key:
+            type: String
+            example: 1
+          value:
+            type: String
+            example: yes
+  responses:
+    UnauthorizedError:
+      description: Access token is missing or invalid
+  securitySchemes:
+    bearerAuth: # arbitrary name for the security scheme
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

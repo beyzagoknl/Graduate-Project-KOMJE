@@ -1,0 +1,25 @@
+.guestEventContainer {
+  padding-top: 5rem;
+}
+.eventContainer {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.eventGuestPage-content {
+  margin-top: 3rem;
+}
+.event-img {
+  width: 250px;
+
+  margin: auto;
+}
+.img-box-guestPage {
+  display: flex;
+  margin: auto;
+}
+
+.event-img {
+  margin: auto;
+}

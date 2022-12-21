@@ -1,0 +1,41 @@
+.point {
+  width: 40px;
+  height: 40px;
+  border: 1px solid;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+}
+
+.passed {
+  background-color: var(--primary-dark-color);
+  border-color: var(--primary-dark-color);
+  color: var(--primary-light-color);
+}
+
+.current {
+  background-color: var(--primary-light-color);
+  border-color: var(--primary-dark-color);
+  color: var(--primary-dark-color);
+}
+
+.waiting {
+  background-color: var(--secondary-color);
+  border-color: var(--primary-light-color);
+  color: var(--primary-light-color);
+}
+
+.label {
+  margin-left: -100%;
+  margin-right: -100%;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 10px;
+  font-weight: 200;
+  color: var(--primary-dark-color);
+}
+
+.label-current {
+  font-weight: 700;
+}

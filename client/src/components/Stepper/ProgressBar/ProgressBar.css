@@ -1,0 +1,53 @@
+.komje-progressbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px auto 60px auto;
+  max-width: 800px;
+  padding: 0 36px;
+}
+
+.komje-progressbar .full-width {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.komje-step-point {
+  border-radius: 50%;
+  border: 1px solid #111;
+  padding: 0 10px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.komje-progressbar .line {
+  flex-grow: 1;
+  height: 3px;
+}
+
+.komje-progressbar .passed-passed {
+  background-color: var(--primary-dark-color);
+}
+
+.komje-progressbar .passed-current {
+  background: linear-gradient(
+    90deg,
+    var(--primary-dark-color) 0%,
+    var(--primary-light-color) 100%
+  );
+}
+
+.komje-progressbar .current-waiting {
+  background: linear-gradient(
+    90deg,
+    var(--primary-light-color) 0%,
+    var(--secondary-color) 100%
+  );
+}
+
+.komje-progressbar .waiting-waiting {
+  background-color: var(--secondary-color);
+}

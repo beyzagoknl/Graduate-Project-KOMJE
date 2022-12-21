@@ -1,0 +1,151 @@
+.event-page-container {
+  min-height: calc(100vh - 413px) !important;
+  display: block;
+  margin: 1rem auto 2rem auto;
+  width: 50rem;
+  background-color: var(--white-color);
+  padding: 1rem 1rem 3rem 1rem;
+}
+.img-box {
+  max-width: 50%;
+  margin: auto;
+}
+.copy-link-button {
+  background: var(--accent-color);
+  color: var(--primary-light-color);
+  border: 1px solid var(--accent-color);
+  padding: 0.4rem 0.5rem;
+  border-radius: var(--border-radius-btn-input);
+  margin: 0.5rem 0 0.5rem 0.5rem;
+  cursor: pointer;
+  font-size: var(--font-size-btn);
+  font-family: var(--title-font-family-title);
+}
+.img-guest-box {
+  width: 100%;
+  display: flex;
+}
+.copy-link-button:hover {
+  background-color: var(--primary-light-color);
+  color: var(--accent-color);
+}
+
+.copyLink-input {
+  width: 70%;
+}
+.copy-link-group {
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.copy-link-group .shot-link {
+  width: 100%;
+}
+
+.copy-link-group .shot-link input {
+  padding: 18px !important;
+}
+
+.copy-link-group button {
+  margin-top: 25px;
+}
+
+.button-group {
+  display: flex;
+  margin: 1rem auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-page-container {
+  min-height: 100vh;
+  margin-top: 3rem;
+}
+.event-page-container button {
+  padding: 1rem;
+  width: 160px;
+}
+.details {
+  margin: auto;
+  margin-top: 2rem;
+  min-width: 300px;
+}
+.form {
+  margin: auto;
+  margin-top: 2rem;
+  min-width: 300px;
+}
+.question-form {
+  width: 100%;
+  padding: 20px;
+  margin: auto;
+}
+
+.weddingDefault .title {
+  color: var(--secondary-color);
+  visibility: visible;
+  font-size: 15px;
+}
+
+.weddingDefault .item {
+  line-height: 30px;
+}
+
+.form .question {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.form .required {
+  font-size: 15px;
+
+  visibility: visible;
+  vertical-align: super;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="number"] {
+  height: 40px;
+  width: calc(100% - 40px);
+  border-color: var(--bs-accordion-border-color);
+  margin-left: 20px;
+}
+
+.form input[type="radio"],
+.form input[type="checkbox"] {
+  width: fit-content;
+  margin-right: 6px;
+  margin-left: 20px;
+}
+
+.form .option {
+  color: var(--accent-color);
+}
+.option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+@media (max-width: 600px) {
+  .event-page-container {
+    width: 100%;
+  }
+
+  .event-page-container button {
+    padding: 1rem;
+    width: 100%;
+    margin: 0.5rem auto;
+  }
+
+  .copy-link-group {
+    flex-direction: column;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+}

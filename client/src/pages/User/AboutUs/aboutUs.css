@@ -1,0 +1,117 @@
+.teamIntro-container {
+  padding: 1rem;
+}
+.first-team-title {
+  text-align: justify;
+  margin: 2rem;
+}
+.aboutUs-paragraph {
+  text-align: justify;
+  margin: 2rem;
+}
+.faq .accordion {
+  width: 80% !important;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 300px;
+}
+.accordion-button {
+  margin-left: -0.8rem;
+}
+
+.team-member-box {
+  margin: 2rem;
+  box-shadow: 2px 2px 5px 1px rgb(0 0 0 / 15%),
+    -2px -2px 5px 1px rgb(0 0 0 / 15%);
+  border-radius: 15px;
+  padding: 1rem 2rem 2rem 2rem;
+}
+.team-member-box:hover {
+  box-shadow: 0px 6px 18px var(--accent-color);
+  transition: 0.5s;
+}
+
+.team-pic {
+  width: 150px;
+  border-radius: 20px;
+  display: block;
+  padding: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.data-box {
+  text-align: center;
+}
+
+.icon-social {
+  margin-left: 5px;
+  margin-top: -1.4rem;
+}
+
+.icon-social-box {
+  margin-left: 0.7rem;
+}
+.accordion-button {
+  color: var(--accent-color);
+  font-family: var(--title-font-family-title);
+}
+
+.accordion-button:focus {
+  color: var(--accent-color);
+  font-size: var(--font-size-title);
+}
+.paragraph {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  padding: 1rem;
+}
+.meet-team {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: -2rem;
+}
+
+/* =============================Media Query section================================== */
+@media only screen and (min-width: 600px) {
+  .team-member-box {
+    display: flex;
+  }
+  .team-pic {
+    min-width: 150px;
+  }
+
+  .paragraph {
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .team-member-box {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .team-pic {
+    min-width: 200px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .accordion {
+    margin-top: 2rem;
+  }
+  .team-pic {
+    margin-top: 3rem;
+    min-width: 200px;
+  }
+
+  .teamIntro-container {
+    margin-left: 7rem;
+    margin-right: 7rem;
+  }
+}

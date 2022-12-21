@@ -1,0 +1,38 @@
+.signup-box {
+  margin: 2rem auto 2rem auto;
+}
+.signup-form {
+  width: 100%;
+  margin: auto;
+}
+.btn-box {
+  width: 50%;
+  margin: auto;
+}
+.create-title {
+  margin: 1.2rem;
+  margin-top: -0.7rem;
+  text-align: center;
+}
+.sign-up-btn {
+  width: 70%;
+  height: 50px;
+  margin: auto;
+  margin-top: 10px;
+}
+.error-span {
+  font-size: 8px;
+}
+.form-box {
+  padding: 10px;
+}
+@media only screen and (min-width: 200px) {
+  .signup-box {
+    max-width: 90%;
+    margin: auto;
+    margin-top: -5rem;
+  }
+  .sign-up-btn {
+    min-width: 50px;
+  }
+}
